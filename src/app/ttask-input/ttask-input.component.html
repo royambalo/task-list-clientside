@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="d-flex justify-content-between">
+        <div class="col-6"> 
+            <input placeholder="Type the Task.." type="text" name="name" class="form-control" id="id_name"  [(ngModel)] ="myName"/>
+        </div>
+        <div class="col-3">
+            <select class="form-control" [(ngModel)]="myCat">
+                <option value="">Select category</option>
+                <option>sport</option>
+                <option>learn</option>
+                <option>home jobs</option>
+            </select>
+        </div>
+        <div class="col-1">
+            <button (click)="add()" class="btn btn-info">Add</button>
+        </div>
+        <div class="col-2">
+            <select  (change)="sort()" class="form-control" name="category" id="id_sort" [(ngModel)]="mySort">
+                <option value="">sort by</option>
+                <option value="_id">By ID</option>
+                <option value="date" >By Date</option>
+                <option value="cat">By Category</option>
+            </select>
+        </div>
+    </div>
+</div>

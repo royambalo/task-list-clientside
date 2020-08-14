@@ -1,0 +1,11 @@
+<div class="container">
+<app-ttask-input (sortBy)="sortby($event)" (addToArr)="add($event)"></app-ttask-input>
+  <div class="mt-5 listClass ">
+    <div *ngFor="let item of arr; let index = index;" class="">
+        <app-task-list  [arr]="item" (dellone)="del($event)" (editone)="editone($event)" ></app-task-list>
+    </div>
+  </div>  
+    <div class="d-flex justify-content-center align-items-center mt-4">
+        <button  (click)="delAll.emit()" class="btn btn-dark float-right">Delete All Tasks</button>
+    </div>
+</div>

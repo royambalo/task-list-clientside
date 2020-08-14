@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'toDoList';
+  name="roy"
+
+  showmewhatyougot(){
+    return "this is"+this.title+"dd"+this.title;
+  }
 }

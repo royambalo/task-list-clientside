@@ -1,0 +1,34 @@
+<div id="id_dark" class="d-none" >
+    <div class="dark_inside p-2">
+        <div class="col">
+            <h4 class="display-4">Edit task</h4>
+            <div class="row mt-5">
+                <div class="col-3">
+                    <h4 class="mr-3">Info:</h4>
+                </div>
+                <div class="col-8">
+                    <input #taskInfo value={{id_info}} type="text" class="form-control" placeholder="Insert info..."> 
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-3">
+                    <h4 class="mr-3">Cat: </h4>
+                </div>
+                <div col-9>
+                    <select #taskCategory class="form-control">
+                        <option value={{id_cat}}>{{id_cat}}</option>
+                        <option value="Home">Home</option>
+                        <option value="Work">Work</option>
+                        <option value="Food">Food</option>
+                        <option value="Sport">Sport</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-outline-success mr-4" (click)="editFinal(taskInfo,taskCategory)" >Edit</button> 
+            <button class="btn btn-outline-danger my-4" (click)="cancel()">Cancel</button> 
+        </div>    
+    </div>
+</div>
+
+    <app-header></app-header>
+    <app-main (sortBy_val)="sortBy_val($event)" (edittask)="editOne($event)" (delOne)="delOne($event)" (delAll)="delAll()"(addToArr)="addToArr($event)"[arr]="arr"></app-main>

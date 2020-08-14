@@ -1,0 +1,19 @@
+<div class="col-11 border mt-2 p-2">
+    <div class=" d-flex justify-content-around">
+        <div class="col-3">
+            <h5>{{arr.info}}</h5>
+        </div>
+        <div class="col-3">
+            <h5>{{arr.cat}}</h5>
+        </div>
+        <div class="col-3">
+            <h5>
+                {{arr.date | date: 'dd-MM-yyyy'}}
+            </h5>
+        </div>
+        <div class="col-3 d-flex justify-content-end">
+            <button class="btn btn-info mr-4" (click)="edit()">edit</button>
+            <button (click)="delOne(arr._id)" class="btn btn-dark">X</button>
+        </div>
+    </div>
+</div>
